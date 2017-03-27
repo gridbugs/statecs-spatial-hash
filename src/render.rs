@@ -22,7 +22,8 @@ struct FieldTemplateData {
 struct TemplateData {
     pub fields: Vec<FieldTemplateData>,
     pub update_fields: Vec<FieldTemplateData>,
-    pub ecs_namespace: String,
+    pub ecs_core_namespace: String,
+    pub ecs_content_namespace: String,
     pub position: String,
 }
 
@@ -50,7 +51,8 @@ impl TemplateData {
         let mut data = TemplateData {
             fields: Vec::new(),
             update_fields: Vec::new(),
-            ecs_namespace: spec.ecs_namespace.clone(),
+            ecs_core_namespace: spec.ecs_core_namespace.clone(),
+            ecs_content_namespace: spec.ecs_content_namespace.clone(),
             position: spec.position.clone(),
         };
 
